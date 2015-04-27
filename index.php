@@ -1,0 +1,1 @@
+<?php $ip=$_SERVER['REMOTE_ADDR'];if ($ip == '2.220.117.114'||$ip == '212.74.119.237' || $ip == '90.213.181.98' || $ip=='94.15.185.242' ) {include('index2.php');} else {include('default.html');}?>
