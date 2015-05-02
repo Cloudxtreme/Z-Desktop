@@ -11,7 +11,7 @@
 ***/
 echo $header; ?>
 <style>@media only screen and (min-width:800px) {.logobrand{color:#fff} } </style>
-<div class="item active nix-hero left left-shadow" style="background-image: url('http://zohannah.com/catalog/view/theme/zohannah/image/campaigns/demo.jpg')">
+<div class="item active nix-hero left left-shadow" style="background-image: url('/catalog/view/theme/zohannah/image/campaigns/demo.jpg')">
   <div class="hero-nav-container nix-hero-container">
     <div class="nix-hero-copy-wrapper">
       <div class="nix-hero-copy">

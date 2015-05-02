@@ -36,7 +36,7 @@
         <label class="control-label" for="input-payment-telephone"><?php echo $entry_telephone; ?></label>
         <input type="text" name="telephone" value="" placeholder="<?php echo $entry_telephone; ?>" id="input-payment-telephone" class="form-control" />
       </div>
-      <div class="form-group">
+      <div class="form-group hide">
         <label class="control-label" for="input-payment-fax"><?php echo $entry_fax; ?></label>
         <input type="text" name="fax" value="" placeholder="<?php echo $entry_fax; ?>" id="input-payment-fax" class="form-control" />
       </div>
@@ -149,7 +149,7 @@
   <div class="col-sm-6">
     <fieldset id="address">
       <legend><?php echo $text_your_address; ?></legend>
-      <div class="form-group">
+      <div class="form-group hide">
         <label class="control-label" for="input-payment-company"><?php echo $entry_company; ?></label>
         <input type="text" name="company" value="" placeholder="<?php echo $entry_company; ?>" id="input-payment-company" class="form-control" />
       </div>
@@ -170,6 +170,7 @@
         <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>" id="input-payment-postcode" class="form-control" />
       </div>
       <div class="form-group required">
+        <legend>Your Location</legend>
         <label class="control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
         <select name="country_id" id="input-payment-country" class="form-control">
           <option value=""><?php echo $text_select; ?></option>
@@ -283,13 +284,14 @@
     </fieldset>
   </div>
 </div>
-<div class="checkbox">
+<div class="checkbox clearfix hide">
   <label for="newsletter">
-    <input type="checkbox" name="newsletter" value="1" id="newsletter" />
+    <input type="checkbox" checked checked="checked" name="newsletter" value="1" id="newsletter" />
     <?php echo $entry_newsletter; ?></label>
 </div>
 <?php if ($shipping_required) { ?>
-<div class="checkbox">
+<br />
+<div class="checkbox clearfix">
   <label>
     <input type="checkbox" name="shipping_address" value="1" checked="checked" />
     <?php echo $entry_shipping; ?></label>
@@ -297,8 +299,9 @@
 <?php } ?>
 <?php if ($text_agree) { ?>
 <div class="buttons clearfix">
-  <div class="pull-right"><?php echo $text_agree; ?> &nbsp;
-    <input type="checkbox" name="agree" value="1" />
+  <div class="pull-right">
+    <span class="hide"><?php echo $text_agree; ?> &nbsp;</span>
+    <input type="checkbox" class="hide" name="agree" checked checked="checked" value="1" />
     <input type="button" value="<?php echo $button_continue; ?>" id="button-register" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
   </div>
 </div>

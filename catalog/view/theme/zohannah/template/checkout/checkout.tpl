@@ -1,92 +1,240 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($error_warning) { ?>
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+<?php
+/***
+
+ * --- --- --- --- ---
+ * Zohannah
+ * Khaleel Mughal
+ * --- --- --- --- ---
+ * #Z1
+ * --- --- --- --- ---
+
+***/
+// HEADER 
+$zoh_css="zoh_checkout.css";
+$cart_header = str_replace("zohannah.css", $zoh_css, $header);
+echo $cart_header;
+?>
+
+<!--
+// CHECKOUT WRAPPER
+-->
+<div class="nix-container cart_zohannah_IBM zoh_cart zoh_checkoutpayments">
+<div class="nix-cart-pusher">
+  <div class="nix-lg-cont container-fluid nix-relative nix-checkout-container checkout-cart-page">
+  <div class="row nix-checkout-content-container zohannah_rr_websphere">
+  <div class="col-xs-12 col-md-8">
+
+  <div class="row">
+    <div class="checkout-main-column-wrapper">
+    <div class="checkout-top">
+      <!--
+      // LOGO
+      -->
+      <a class="navbar-brand" href="/">
+        <h1 class="freight logobrand zohannah_logo_eposno blacklogo">ZOHANNAH</h1>
+      </a>
+      <span class="secure-shopping">Secured Shopping</span>
+    </div>
+
+    <!--
+    // CHECKOUT STEPS, 1 2 and 3
+    -->
+    <div class="checkout-navigation">
+      <div class="col-xs-4 step-item">
+        <div class="row">
+          <span class="step-line col-xs-5 col-sm-5"></span>
+          <span class="step-index col-xs-2 col-sm-2">1</span>
+          <span class="step-line col-xs-5 col-sm-5"></span>
+        </div>
+        <div class="row">
+          <span class="step-title col-xs-12">Shopping Cart</span>
+        </div>
+      </div>
+      <div class="col-xs-4 step-item active">
+        <div class="row">
+          <span class="step-line col-xs-4 col-sm-5"></span>
+          <span class="step-index col-xs-4 col-sm-2">2</span>
+          <span class="step-line col-xs-4 col-sm-5"></span>
+        </div>
+        <div class="row">
+          <span class="step-title col-xs-12">Address &amp; Payment</span>
+        </div>
+      </div>
+      <div class="col-xs-4 step-item">
+        <div class="row">
+          <span class="step-line col-xs-4 col-sm-5"></span>
+          <span class="step-index col-xs-4 col-sm-2">3</span>
+          <span class="step-line col-xs-4 col-sm-5"></span>
+        </div>
+        <div class="row">
+          <span class="step-title col-xs-12">Review</span>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- 
+        // OPENCART ENGINE
+        -->
+        <div class="checkout-steps checkout-main-column" id="content">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_option; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-checkout-option">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <?php if (!$logged && $account != 'guest') { ?>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_account; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-payment-address">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <?php } else { ?>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_payment_address; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-payment-address">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <?php } ?>
+            <?php if ($shipping_required) { ?>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-shipping-address">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-shipping-method">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <?php } ?>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_payment_method; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-payment-method">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $text_checkout_confirm; ?></h3>
+              </div>
+              <div class="panel-collapse collapse" id="collapse-checkout-confirm">
+                <div class="panel-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--
+        // END OPENCART ENGINE
+        -->
+
+        <!-- 
+        // MOBILE BACK TOP SHOP
+        -->
+        <div class="mobile-checkout-backtoshop">
+          <div class="col-xs-12">
+            <a href="/" class="sidebar-button nix-btn nix-btn-grey"
+            id="cartbacktoshopmobile">Continue Shopping</a>
+          </div>
+        </div>
+        </div>
+      
+      </div>
+    </div>
+  
+
+<!-- 
+// CONTINUE BUTTON AND SECURE SHOPPING MESSAGE
+-->
+<div class="col-xs-12 col-md-4 sidebar-container">
+  <div class="sidebar-container-tablet-sizer">
+    <div class="nix-side-container">
+      <div class="sidebar-inner-wrap">
+          <div class="sidebar-cart-top">
+          <div class="hide-on-tablet hide-on-mobile">
+            <span class="secure-shopping">Secured Shopping</span>
+          </div>
+          <a href="/"
+          class="sidebar-button nix-btn nix-btn-grey"
+          id="cartbacktoshop">Continue Shopping</a>
+          </div>
+      </div>
+    </div>
   </div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_option; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-option">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php if (!$logged && $account != 'guest') { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_account; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } else { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_address; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } ?>
-        <?php if ($shipping_required) { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-address">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_confirm; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-confirm">
-            <div class="panel-body"></div>
+</div>
+
+<!-- 
+// CUSTOMER SERVICE EMAIL CONTACT TELEPHONE
+-->
+<div class="sidebar-container sidebar-support">
+  <h4 class="support-divider">Need Assistance?</h4>
+  <span class="support-icon phone">0808 234 7003</span>
+    <div class="support-inset">
+      <span class="support-icon clock">Monday - Thursday<br><em>8:00 - 17:00</em></span>
+      <span class="support-icon clock">Friday<br><em>8:00 - 16:00</em></span>
+    </div>
+  <a href="mailto:cs@zohannah.com" class="support-icon envelope"> cs@zohannah.com</a>
+  <a href="https://www.facebook.com/zohannahshop"class="support-icon side-facebook" target="_blank">Facebook Message</a>
+  <div class="support-divider"></div>
+    <div class="checkout-links-wrap three-col">
+      <ul class="support-list checkout-list">
+        <li><a class="sidebar-link ajaxlink" href="">Terms of Sale</a></li>
+        <li><a class="sidebar-link ajaxlink" href="">Shipping Policy</a></li>
+        <li><a class="sidebar-link ajaxlink" href="">Return Policy</a></li>
+      </ul>
+      <ul class="support-list checkout-list">
+        <li><a class="sidebar-link ajaxlink" href="">Warranty </a></li>
+      </ul>
+      <ul class="support-list checkout-list">
+        <li><a class="sidebar-link ajaxlink" href="">Privacy Notice </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <div class="row">
+      <div class="checkout-main-column-wrapper">
+        <div class="checkout-main-column">
+          <div class="row sub-footer">
+            <div class="col-sm-6 col-xs-12">
+              <span class="copyright">&copy; <script>now=new Date;theYear=now.getFullYear();document.write(theYear);</script> ZOHANNAH</span>
+            </div>
+            <div class="col-sm-6 col-xs-12 footer-cc">
+              <img src="/catalog/view/theme/zohannah/image/checkout/payment-1.png"/>
+              <img src="/catalog/view/theme/zohannah/image/checkout/payment-2.png"/>
+              <img src="/catalog/view/theme/zohannah/image/checkout/payment-4.png"/>
+              <img src="/catalog/view/theme/zohannah/image/checkout/payment-5.png"/>
+            </div>
           </div>
         </div>
       </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <div class="nix-overlay-pusher"></div>
+  <div class="nix-overlay-white"></div>
+  </div>
 </div>
-<script type="text/javascript"><!--
+
+<script type="text/javascript">
+<!--
 $(document).on('change', 'input[name=\'account\']', function() {
 	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {	
 		if (this.value == 'register') {
@@ -776,5 +924,13 @@ $(document).delegate('#button-payment-method', 'click', function() {
         }
     }); 
 });
-//--></script> 
-<?php echo $footer; ?>
+//-->
+</script> 
+
+<!-- 
+// PAGE SPECIFIC JS AND FOOTER
+-->
+<script>
+$('body').attr('id', 'cart-address-payment');
+</script>
+<?php echo $footer; ?> 

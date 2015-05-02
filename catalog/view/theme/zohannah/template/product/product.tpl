@@ -41,6 +41,9 @@ $pid=$product_id;
 <meta itemprop="name" content="<?php echo $heading_title; ?>">
 <meta itemprop="sku" content="<?php echo $model; ?>">
 <meta itemprop="productID" content="<?php echo $product_id; ?>">
+<meta itemprop="price" content="<?php echo $price; ?>">
+<meta itemprop="category" content="<?=$_GET['path']; ?>">
+
 
 <div class="container" id="hero-container">
 <div class="row relative">
@@ -55,7 +58,7 @@ $pid=$product_id;
    // NAME, ITEM AND DETAILS
    -->
    <span class="new-sku" id="prodnewicon">New</span>
-   <h1 class="" id="product-name"><?php echo $heading_title; ?></h1>
+   <h1 id="product-name"><?php echo $heading_title; ?></h1>
    <div class="price">
       <span class="prodprice" itemprop="price"><?php echo $price; ?></span>
       <div class="tablecell"> </div>
@@ -65,16 +68,15 @@ $pid=$product_id;
    </div>
 </div>
 
-
-
-
-<div id="mobile-hero">
+<!--
+// MOBILE PRODUCT PDP PRODUCT IMAGES
+-->
+<div id="mobile-hero" class="mobile-row">
 <div class="swiper-container">
    <div class="swiper-wrapper">
       <?php if ($thumb || $images) { ?>
           <?php if ($images) { ?>
-              <?php foreach ($images as $image) { ?>   
-                   
+              <?php foreach ($images as $image) { ?>      
                   <div class="swiper-slide"><img alt="<?php echo $heading_title; ?>" src="<?php echo $image['popup']; ?>" data-full="<?php echo $image['popup']; ?>"></div>
               <?php } ?>
           <?php } ?>
@@ -84,11 +86,9 @@ $pid=$product_id;
 </div>   
 </div>
 
-
-
-
-
-
+<!--
+// COLOUR SKU WEBSPHERE COMMERCE ORACLE INPUTS
+-->
 <div class="color-alt-container">
    <div id="color-alts">
       <div class="centered">
@@ -101,13 +101,14 @@ $pid=$product_id;
 
 <!--
 // STOCK AND MESSAGING
+// SIZE AND COLOUR DROPDOWN SELECT BOXES
 -->
-<div class="product-color" id="product-color">
+<div class="product-color zohMobilePadding" id="product-color">
    <?php if ($options) { ?>
          <?php foreach ($options as $option) { ?>
             <?php if ($option['type'] == 'select') { ?>
                <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                  <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
+                  <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control zohannahPDPFormInput">
                         <option value=""><?php echo $text_select; ?></option>
                         <?php foreach ($option['product_option_value'] as $option_value) { ?>
                            <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -121,7 +122,7 @@ $pid=$product_id;
             <?php } ?>
          <?php } ?>
       <?php } ?>   
-   <span class="current-color" id="current-color-primary">Black / White </span>
+   <span class="current-color" id="current-color-primary"></span>
    <span class="current-color-message in-stock" id="current-color-message-primary">In Stock</span>
 </div>
 
@@ -177,17 +178,17 @@ $pid=$product_id;
 <?php if ($thumb || $images) { ?>
 <section id="desktop-hero" class="zohannah-product-page-image-viewer">
    <div class="alt-wrapper pdp-wrapper-vert">
-   <div class="pdp-wrapper-vert-center">
-      <?php if ($images) { ?>
-         <ul id="productaltimages" class="alt-images">
-            <?php foreach ($images as $image) { ?>
-               <li class="alt-thumb minithumb viewthumb altthumb item active primary">
-                  <img alt="<?php echo $heading_title; ?>" class="minithumbimg" src="<?php echo $image['thumb']; ?>" data-full="<?php echo $image['popup']; ?>">
-               </li>
-            <?php } ?>
-         </ul>
-      <?php } ?>
-   </div>
+      <div class="pdp-wrapper-vert-center">
+         <?php if ($images) { ?>
+            <ul id="productaltimages" class="alt-images">
+               <?php foreach ($images as $image) { ?>
+                  <li class="alt-thumb minithumb viewthumb altthumb item active primary">
+                     <img alt="<?php echo $heading_title; ?>" class="minithumbimg" src="<?php echo $image['thumb']; ?>" data-full="<?php echo $image['popup']; ?>" onclick="zohImageViewer('<?php echo $image['thumb']; ?>');">
+                  </li>
+               <?php } ?>
+            </ul>
+         <?php } ?>
+      </div>
    </div>
    <?php if ($thumb) { ?>
       <div id="productimage" class="product-hero-wrapper">
@@ -221,7 +222,7 @@ $pid=$product_id;
       <dl class="feature-list">
       <dd>
          - Signature Italian jersey fabric<br />
-         - 95% polymide 5% lycra.
+         - 95% polymide 5% lycra.<br />
          - Available in colour options shown above<br />
          - Available in size options shown above<br /> 
       </dd>
@@ -765,6 +766,17 @@ M23,17.3c-0.6,0-0.7-1.3-0.7-2.2c0-0.9,0.1-2.2,0.7-2.2s0.7,1.3,0.7,2.2C23.7,16,23
 -->
 <script type="text/javascript">
 <!--
+
+// IMAGE VIEWER
+// -- Load Desktop/Tablet Gallery
+function zohImageViewer(img) {
+   var imgDiv = '#prod-hero'
+   $(imgDiv).fadeOut();
+   $(imgDiv).attr('src', '');
+   $(imgDiv).attr('src', img); 
+   $(imgDiv).fadeIn("slow");     
+}
+
 // ADD TO CART
 // -- Zohannah Rapid Cart System
 $('#button-cart').on('click', function() {
@@ -799,13 +811,11 @@ $('#button-cart').on('click', function() {
          // FINALLY UPDATE THE PLATFORM
          // -- Zohannah Multichannel WebSphere Commerce
 			if (json['success']) {
-				$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-				$('#cart-total').html(json['total']);
-				$('html, body').animate({ scrollTop: 0 }, 'slow');
-				$('#cart > ul').load('index.php?route=common/cart/info ul li');
+            $('#cart_products_number').load('index.php?route=common/cart/info');
+            $('html, body').animate({ scrollTop: 0 }, 'slow');           
 			}
 		}
-	}); 
+	});
 });
 //-->
 
@@ -817,13 +827,6 @@ var swiper = new Swiper('.swiper-container', {
    pagination: '.swiper-pagination',
    paginationClickable: true,
    loop: true
-   /*
-   autoplay:4500,
-   speed: 600,
-   loop: true,
-   calculateHeight: true,
-   autoplayDisableOnInteraction: false,
-   */
 });
 </script>
 <?php

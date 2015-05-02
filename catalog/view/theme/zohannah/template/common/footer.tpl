@@ -79,11 +79,12 @@
 <!--
 // TRACKING SCRIPT
 -->
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="//use.typekit.net/zxv2bjk.js"></script>
-<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-<script src="catalog/view/theme/zohannah/js/zohannah.js" type="text/javascript"></script>
-<script src="catalog/view/theme/zohannah/js/fix.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="catalog/view/theme/zohannah/js/jquery-ui-timepicker-addon.js"></script>
+<script src="catalog/view/javascript/common.js"></script>
+<script src="catalog/view/theme/zohannah/js/zohannah.js"></script>
+<script src="catalog/view/theme/zohannah/js/fix.js"></script>
 <script>try{Typekit.load();}catch(e){}$(function(){$("#DateofBirth").datepicker({changeMonth:true,changeYear:true,yearRange:'1910:2014'});});</script>
 </body>
 </html>

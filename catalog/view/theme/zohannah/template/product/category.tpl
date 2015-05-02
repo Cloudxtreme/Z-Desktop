@@ -140,9 +140,7 @@ if($shopall=='59'){
 <div class="container prod-filter-bar nix-lg-cont container-fluid zohfiltering_mobile">
 	<div class="row">
       <div class="filter-inner col-sm-12">
-         
          <a href="#" class="nix-hero-button button-filter-mobile">FILTER</a>
-         
       </div>
    </div>
 </div>
@@ -151,19 +149,17 @@ if($shopall=='59'){
 <!--
 // EMPTY PAGE
 -->
-
 <?php if (!$categories && !$products) { ?>
-<div class="container-fluid products-display">
+<div class="container-fluid products-display" style="padding:30px !important">
    <div class="row nix-pcp-container">
       <div class="landing_products_container full">
          <div id="category-products" class="row category-products product-container-group">
-            <h4 style="margin:0px !important"><?php echo $text_empty; ?></h4>
+            <center><h4 style="margin:0px !important;font-size:25px"><?php echo $text_empty; ?></h4></center>
          </div>
       </div>
    </div>
 </div>
 <?php } ?>
-
 
 <?php if ($products) { ?>
 <!--
@@ -190,12 +186,10 @@ if($shopall=='59'){
                            <span>Favourite</span>
                         </div>
                         <div data-new-product="false" class="new-badge cta-new-color active">
-                           <span>
-                              NEW COLOR
-                           </span>
+                           <span>NEW COLOR</span>
                         </div>
                         <div class="cta-cart launch-quickshop" onclick="javascript:location.href='<?php echo $product['href']; ?>'">
-                           <span>Quick Shop</span>
+                           <span>View</span>
                         </div>
                         </div>
                      </div>
@@ -207,13 +201,9 @@ if($shopall=='59'){
                      </div>
                   
                      <div class="prod-details">
-                        <p class="title">
-                           <?php echo $product['name']; ?>
-                        </p>
+                        <p class="title"><?php echo $product['name']; ?></p>
                         <p class="price">
-                           <span>
-                              <?php if ($product['price']) { ?><?php echo $product['price']; ?><? } ?>
-                           </span>
+                           <span><?php if ($product['price']) { ?><?php echo $product['price']; ?><? } ?></span>
                            &nbsp;|&nbsp;
                            12 Colors
                         </p>
@@ -223,9 +213,7 @@ if($shopall=='59'){
                
                </div><!--// product-inner -->
                
-               <a class="product-hotspot textindent bottom" href="<?php echo $product['href']; ?>">
-                  <?php echo $product['name']; ?>
-               </a>
+               <a class="product-hotspot textindent bottom" href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
                
                </div>
                </div>
@@ -243,7 +231,11 @@ if($shopall=='59'){
       
 </div>
 </div>
-<?php echo $footer; ?> 
+
+<!-- 
+// CATEGORY PDP JS TRACKER
+-->
 <script>
 jQuery('body').addClass('pcp');
 </script>
+<?php echo $footer; ?> 
