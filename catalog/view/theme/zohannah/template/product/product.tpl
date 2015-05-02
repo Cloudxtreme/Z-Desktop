@@ -183,7 +183,7 @@ $pid=$product_id;
             <ul id="productaltimages" class="alt-images">
                <?php foreach ($images as $image) { ?>
                   <li class="alt-thumb minithumb viewthumb altthumb item active primary">
-                     <img alt="<?php echo $heading_title; ?>" class="minithumbimg" src="<?php echo $image['thumb']; ?>" data-full="<?php echo $image['popup']; ?>" onclick="zohImageViewer('<?php echo $image['thumb']; ?>');">
+                     <img alt="<?php echo $heading_title; ?>" class="minithumbimg" src="<?php echo $image['thumb']; ?>" data-full="<?php echo $image['popup']; ?>" onclick="zohImageViewer('<?php echo $image['popup']; ?>');">
                   </li>
                <?php } ?>
             </ul>
