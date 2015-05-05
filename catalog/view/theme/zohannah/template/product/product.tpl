@@ -139,6 +139,12 @@ $pid=$product_id;
       <div id="product" class="highTransactionZohannahOrderTable-EposWareHouseForm">         
          <input type="hidden" name="quantity" value="1" size="2" id="input-quantity" />
          <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+         <input type="hidden" name="GlobalAPIIdForExternalSites" value="GPId-<?php echo $product_id; ?>" />
+         <input type="hidden" name="stockAllocation" value="stu-s-sos-uae-uk-1" />
+         <input type="hidden" name="APIImportOrderId" value="<?php echo $product_id; ?>-uk1-uae1" />
+         <input type="hidden" name="langId" value="-1" />
+         <input type="hidden" name="storeId" value="10002" />
+         <input type="hidden" name="x" value="<?php echo md5(hash); ?>" />
             <button type="button" id="button-cart"
             class="addbutton cart-toggler toggler"
             data-effect="nix-cart-effect-8"

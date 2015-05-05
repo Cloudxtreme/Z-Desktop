@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en" ng-app="ZOHANNAH">
+<head>
 
 <!--
 
@@ -64,18 +66,15 @@
 
 </head>
 
-<body class="nixon-desktop zohannah_application home en_UK promo">
+<body ng-controller="zohMAIN" class="ng-cloak nixon-desktop zohannah_application home en_UK promo">
 
 <!--
 // ZOHANNAH WRAPPER
 -->
 <div id="page" class="nix-cart-pusher zohannah-engine-<?php echo md5(rand())?>">
 
-<button type="button" id="mobile-nav-button" class="">
-   <span class="icon-bar"></span>
-   <span class="icon-bar"></span>
-   <span class="icon-bar"></span>
-</button>
+<button type="button" id="mobile-nav-button" class=""><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
 <div class="nix-fixed-header-wrapper">
    <div class="nix-fixed-header" id="nix-fixed-header">
    
@@ -104,11 +103,11 @@
    
    </div>
 </div>
-<div id="drop-down-minicart" class="hide">
-   <div id="minicart-inner">
-   <!-- AJAX POWERED -->
-   </div>
-</div>
+
+<!--
+// AJAX DROPDOWN CART
+-->
+<div id="drop-down-minicart" class="hide"><div id="minicart-inner"></div></div>
 
 <div class="navbar nix-navbar">
 <div id="navbar-tablet-bg"></div>
