@@ -52,7 +52,7 @@ echo $header; ?>
    
       <div id="generalcontent" class="primary-content">
         <div align="justify">
-        
+         <!-- IMPO - OGC_Z_ACCOUNT-->
             <?php if ($success) { ?>
                 <div class="errorformapps"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
             <?php } ?>
@@ -80,7 +80,7 @@ echo $header; ?>
             <div class="pull-right"><a href="<?php echo $add; ?>" class="btn btn-primary" style="text-decoration:none"><?php echo $button_new_address; ?></a></div>
             </div>
                    
-            <!-- IMPO - OGC_Z_ACCOUNT-->
+           
             
         
         
