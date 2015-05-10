@@ -108,7 +108,7 @@ VALIDATION
 /*
 FOOTER
 */
-@media only screen and (max-width:750px) {
+@media only screen and (max-width:750px){
 .nix-footer-menu .accordion-drilldown, 
 .nix-footer-menu .accordion-drilldown a{padding:5px !important;font-size:11px !important;background:#f7f8f9}
 .nix-footer-menu ul.accordion-content{display:block}
