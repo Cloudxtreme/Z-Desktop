@@ -21,8 +21,7 @@ GENERAL
 /*
 HIDE FILTERS
 */
-.option_filter_zohannah_1,
-.option_filter_zohannah_6,
+.option_filter_zohannah_1, .option_filter_zohannah_6,
 .option_filter_zohannah_7{display:none !important}
 .prod-filter-bar .filter-inner{text-align:center}
 
