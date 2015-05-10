@@ -13,7 +13,8 @@
 $('#mobile-nav-button').click(function() {$('.nix-main-menu-container').slideToggle();});
 
 // PROMOTION BAR
-$('.promoclose').click(function() {$('.promobar').slideUp();});
+$('.promoclose').click(function() {$('.promoBar').slideUp();});
+setInterval(function(){ $('.promoBar').slideUp(); }, 2500);
 
 // MENU FIXES
 jQuery( window ).resize(function() {	

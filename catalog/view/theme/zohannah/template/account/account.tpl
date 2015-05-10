@@ -1,45 +1,62 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $text_my_account; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $edit; ?>"><?php echo $text_edit; ?></a></li>
-        <li><a href="<?php echo $password; ?>"><?php echo $text_password; ?></a></li>
-        <li><a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></li>
-        <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-      </ul>
-      <h2><?php echo $text_my_orders; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-        <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-        <?php if ($reward) { ?>
-        <li><a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></li>
-        <?php } ?>
-        <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-        <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-        <li><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
-      </ul>
-      <h2><?php echo $text_my_newsletter; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-      </ul>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+<?
+/***
+
+ * --- --- --- --- ---
+ * Zohannah
+ * Khaleel Mughal
+ * --- --- --- --- ---
+ * #Z1
+ * --- --- --- --- ---
+
+***/
+echo $header; ?>
+
+<!--
+// PAGE CSS
+-->
+<style type="text/css">
+.nix-hero{background:url(/catalog/view/theme/zohannah/image/campaigns/about.jpg) no-repeat center;background-size:cover}
+.sidebar-support h4{padding-left:0}
+.home .nix-hero-container{height:450px}
+.page-container{margin-top:25px;margin-bottom:25px}
+#column-right{float:right}
+@media only screen and (max-width:750px){
+	.home .nix-hero-container{height:250px}
+	#column-right{float:none}
+}
+</style>
+
+<!--
+// HTML
+-->
+<div class="center center-shadow nix-hero secondary-hero">
+   <div class="hero-nav-container nix-hero-container">
+      <div class="nix-hero-copy-wrapper">
+         <div class="nix-hero-copy">
+            <h1 class="nix-hero-head"><?php echo $heading_title; ?></h1>
+         </div>
+      </div>
+   </div>
 </div>
-<?php echo $footer; ?>
+
+<div class="container page-container work-here-container">
+   
+   <div class="row">
+   
+      <div id="generalcontent" class="primary-content">
+         <div align="justify">
+         <?php echo $content_top; ?>         
+         Please make a selection from account navigation menu.         
+         </div>
+      </div>
+      
+      <br />
+      
+      <?php echo $column_right; ?>
+      
+   </div>
+</div>
+
+<?
+echo $footer;
+?>

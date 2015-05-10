@@ -73,6 +73,11 @@
 -->
 <div id="page" class="nix-cart-pusher zohannah-engine-<?php echo md5(rand())?>">
 
+<!--
+// PROMO BAR 
+-->
+<div class="promoBar"><center>FREE DELIVERY ON EVERYTHING !</center></div>
+
 <button type="button" id="mobile-nav-button" class=""><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
 
 <div class="nix-fixed-header-wrapper">
