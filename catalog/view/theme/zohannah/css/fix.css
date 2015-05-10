@@ -104,8 +104,7 @@ PROMO BAR
 /*
 VALIDATION
 */
-.errorformapps{color:#d80a0d}
-.errorformapps{border:3px solid #d80a0d !important}
+.errorformapps{color:#d80a0d;border:3px solid #d80a0d !important}
 
 /*
 FOOTER
@@ -122,8 +121,7 @@ FOOTER
 /*
 CART
 */
-#cartPage .nix-fixed-header-wrapper,
-#cartPage .nix-navbar,
+#cartPage .nix-fixed-header-wrapper, #cartPage .nix-navbar,
 #cartPage .mobile-zohannah-menu-wrapper,
 #cart-address-payment .nix-fixed-header-wrapper,
 #cart-address-payment .nix-navbar,
@@ -131,10 +129,8 @@ CART
 #cart-address-payment .nix-footer,
 #cart-address-payment #nix-newsletter-container,
 #cartPage #nix-newsletter-container,
-#cartPage .nix-footer,
-#cartPage #scroll_up,
-#cart-address-payment #scroll_up
-{display:none}
+#cartPage .nix-footer, #cartPage #scroll_up,
+#cart-address-payment #scroll_up{display:none}
 #cartPage .nix-checkout-content-container .checkout-top .navbar-brand{padding:15px !important}
 #cartPage .qtyInput{float:none;margin-left:0;margin-right:0;width:33px;margin-top:21px}
 #cartPage .qtyInputLink{text-decoration:underline}
@@ -163,8 +159,7 @@ CHECKOUT
 */
 #cartPage .form-control,
 #cart-address-payment .form-control{font-size:12px;border-radius:0}
-.panel-group .panel,
-#cartPage .control-label,
+.panel-group .panel, #cartPage .control-label,
 #cart-address-payment .control-label{font-weight:none;text-transform:uppercase}
 #cartPage .panel-group .panel,
 #cart-address-payment .panel-group .panel{border-radius:0 !important}
