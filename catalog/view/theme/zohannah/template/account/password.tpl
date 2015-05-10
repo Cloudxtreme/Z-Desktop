@@ -1,21 +1,59 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+<?
+/***
+
+ * --- --- --- --- ---
+ * Zohannah
+ * Khaleel Mughal
+ * --- --- --- --- ---
+ * #Z1
+ * --- --- --- --- ---
+
+***/
+echo $header; ?>
+
+<!--
+// PAGE CSS
+-->
+<style type="text/css">
+.nix-hero{background:url(/catalog/view/theme/zohannah/image/campaigns/about.jpg) no-repeat center;background-size:cover}
+.sidebar-support h4{padding-left:0}
+.home .nix-hero-container{height:450px}
+.page-container{margin-top:25px;margin-bottom:25px}
+#column-right{float:right}
+@media only screen and (max-width:750px){
+	.home .nix-hero-container{height:250px}
+	#column-right{float:none}
+}
+.form-control{border-radius:0}
+.btn-primary{border-radius:0;border:0;background:#000;text-transform:uppercase}
+.btn-primary:hover{background:#333 !important}
+.btn-default{text-transform:uppercase}
+</style>
+
+<!--
+// HTML
+-->
+<div class="center center-shadow nix-hero secondary-hero">
+   <div class="hero-nav-container nix-hero-container">
+      <div class="nix-hero-copy-wrapper">
+         <div class="nix-hero-copy">
+            <h1 class="nix-hero-head"><?php echo $heading_title; ?></h1>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container page-container work-here-container">
+   
+   <div class="row">
+   
+      <div id="generalcontent" class="primary-content">
+        <div align="justify">
+        
+        <?php echo $content_top; ?>         
+        <!-- IMPO - OGC_Z_ACCOUNT-->
+        
+    <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <legend><?php echo $text_password; ?></legend>
           <div class="form-group required">
@@ -38,13 +76,24 @@
           </div>
         </fieldset>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><a style="border-radius:0" href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
           <div class="pull-right">
             <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
           </div>
         </div>
       </form>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+        
+        <!--// END IMP-->         
+        </div>
+      </div>
+      
+      <br />
+      
+      <?php echo $column_right; ?>
+      
+   </div>
 </div>
-<?php echo $footer; ?> 
+
+<?
+echo $footer;
+?>
