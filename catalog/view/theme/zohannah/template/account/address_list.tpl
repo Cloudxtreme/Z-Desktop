@@ -27,9 +27,9 @@ echo $header; ?>
 .form-control{border-radius:0}
 .btn-primary{border-radius:0;border:0;background:#000;text-transform:uppercase}
 .btn-primary:hover{background:#333 !important}
-.btn-default{text-transform:uppercase}
-.btn-danger,.btn-info{padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
-.btn-danger a, .btn-info a{text-decoration:none}
+.btn-default{border-radius:0;text-transform:uppercase}
+.btn-danger,.btn-info{text-decoration:none !important;padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
+.btn-danger a, .btn-info a{text-decoration:none !important} 
 </style>
 
 <!--
@@ -67,6 +67,9 @@ echo $header; ?>
                 <table class="table table-bordered table-hover">
                     <?php foreach ($addresses as $result) { ?>
                         <tr>
+                        	<tr>
+                        		<td colspan="2">--------------</td>
+                        	</tr>
                             <td class="text-left"><?php echo $result['address']; ?></td>
                             <td class="text-right"><a href="<?php echo $result['update']; ?>" class="btn btn-info"><?php echo $button_edit; ?></a> &nbsp; <a href="<?php echo $result['delete']; ?>" class="btn btn-danger"><?php echo $button_delete; ?></a></td>
                         </tr>
@@ -75,15 +78,12 @@ echo $header; ?>
             <?php } else { ?>
                 <p><?php echo $text_empty; ?></p>
             <?php } ?>
+            <br />
             <div class="buttons clearfix">
-            <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default" style="background:#333;color:#fff"><?php echo $button_back; ?></a></div>
+            <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default" style="border-radius:0;text-decoration:none;background:#333;color:#fff"><?php echo $button_back; ?></a></div>
             <div class="pull-right"><a href="<?php echo $add; ?>" class="btn btn-primary" style="text-decoration:none"><?php echo $button_new_address; ?></a></div>
             </div>
-                   
-           
             
-        
-        
             <!--// END IMP-->  
                    
         </div>

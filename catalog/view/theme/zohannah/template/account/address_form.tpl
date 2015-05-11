@@ -1,21 +1,63 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"> <?php echo $content_top; ?>
-      <h2><?php echo $text_edit_address; ?></h2>
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+<?
+/***
+
+ * --- --- --- --- ---
+ * Zohannah
+ * Khaleel Mughal
+ * --- --- --- --- ---
+ * #Z1
+ * --- --- --- --- ---
+
+***/
+echo $header; ?>
+
+<!--
+// PAGE CSS
+-->
+<style type="text/css">
+.nix-hero{background:url(/catalog/view/theme/zohannah/image/campaigns/about.jpg) no-repeat center;background-size:cover}
+.sidebar-support h4{padding-left:0}
+.home .nix-hero-container{height:450px}
+.page-container{margin-top:25px;margin-bottom:25px}
+#column-right{float:right}
+@media only screen and (max-width:750px){
+	.home .nix-hero-container{height:250px}
+	#column-right{float:none}
+}
+.form-control{border-radius:0}
+.btn-primary{border-radius:0;border:0;background:#000;text-transform:uppercase}
+.btn-primary:hover{background:#333 !important}
+.btn-default{border-radius:0;text-transform:uppercase}
+.btn-danger,.btn-info{text-decoration:none !important;padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
+.btn-danger a, .btn-info a{text-decoration:none !important} 
+</style>
+
+<!--
+// HTML
+-->
+<div class="center center-shadow nix-hero secondary-hero">
+   <div class="hero-nav-container nix-hero-container">
+      <div class="nix-hero-copy-wrapper">
+         <div class="nix-hero-copy">
+            <h1 class="nix-hero-head"><?php echo $text_edit_address; ?></h1>
+            <p style="color:#fff">Make changes below and save.</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container page-container work-here-container">
+   
+   <div class="row">
+   
+      <div id="generalcontent" class="primary-content">
+        <div align="justify">
+         
+         <!-- oc_zohannah_AddressShipmentsCommerce -->
+         
+         <h2>Edit Address</h2>
+         
+         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-firstname"><?php echo $entry_firstname; ?></label>
@@ -283,9 +325,46 @@
           </div>
         </div>
       </form>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+         
+         
+         
+         <!-- oc_zohannah_AddressShipmentsCommerce -->
+            
+            
+            
+                   
+        </div>
+      </div>
+      
+      <br />
+      
+      <?php echo $column_right; ?>
+      
+   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript"><!--
 // Sort the custom fields
 $('.form-group[data-sort]').detach().each(function() {
@@ -411,4 +490,23 @@ $('select[name=\'country_id\']').on('change', function() {
 
 $('select[name=\'country_id\']').trigger('change');
 //--></script>
-<?php echo $footer; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?
+echo $footer;
+?>
