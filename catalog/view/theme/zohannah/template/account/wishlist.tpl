@@ -106,9 +106,9 @@ echo $header; ?>
              </td>
               
             <td class="text-center">
-            	<button style="background:#000" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="xf btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart </button>
+            	<button style="background:#000" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="xf btn btn-primary"><i class="fa fa-shopping-cart"></i>  </button>
                 <br />
-                <a style="background:#333;color:#fff" href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger xf"><i class="fa fa-times"></i> Remove from wishlist</a>
+                <a style="background:#e72d34;color:#fff" href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger xf"><i class="fa fa-times"></i> </a>
              
              </td>
               
