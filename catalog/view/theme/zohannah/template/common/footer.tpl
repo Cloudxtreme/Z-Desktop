@@ -16,6 +16,7 @@
 <!--
 // COMPANY LINKS
 -->
+
 <footer class="nix-footer set-cols-4">
   <div class="container">
     <div class="nix-footer-menu">
@@ -24,33 +25,33 @@
       <ul class="accordion-content">
         <li class="accordion-drilldown"><a href="/about">About Us</a></li>
         <li class="hiddenmobile accordion-drilldown"><a href="/careers">Work Here</a></li>
-        <li class="hiddenmobile accordion-drilldown"><a href="">Press</a></li>
+        <li class="hiddenmobile accordion-drilldown"><a href="/press">Press</a></li>
       </ul>
     </div>
     <div class="nix-footer-menu">
       <h6 class="accordion-header"> <a name="footer-header">Service </a> </h6>
       <hr>
       <ul class="accordion-content">
-        <li class="accordion-drilldown"><a href="">FAQ</a></li>
-        <li class="accordion-drilldown"><a href="">Size Guides</a></li>
-        <li class="accordion-drilldown"><a href="">Contact Us</a> </li>
+        <li class="accordion-drilldown"><a href="/faqs">FAQ</a></li>
+        <li class="accordion-drilldown"><a href="/sizeguides">Size Guides</a></li>
+        <li class="accordion-drilldown"><a href="/contact">Contact Us</a> </li>
       </ul>
     </div>
     <div class="nix-footer-menu">
       <h6 class="accordion-header"><a name="footer-header">Orders &amp; Returns</a></h6>
       <hr>
       <ul class="accordion-content">
-        <li class="accordion-drilldown"><a href="" >Order Status</a></li>
-        <li class="hiddenmobile accordion-drilldown"><a href="">Shipping Policy</a></li>
-        <li class="hiddenmobile accordion-drilldown"><a href="">Return Policy</a></li>
+        <li class="accordion-drilldown"><a href="/order">Order Status</a></li>
+        <li class="accordion-drilldown"><a href="/delivery">Delivery Policy</a></li>
+        <li class="hiddenmobile accordion-drilldown"><a href="/returns">Return Policy</a></li>
       </ul>
     </div>
     <div class="nix-footer-menu">
       <h6 class="accordion-header"><a name="footer-header">Legal</a></h6>
       <hr>
       <ul class="accordion-content">
-        <li class="hiddenmobile accordion-drilldown"><a href="">Privacy</a></li>
-        <li class="accordion-drilldown"><a href="">Terms and Conditions</a></li>
+        <li class="hiddenmobile accordion-drilldown"><a href="/privacy">Privacy</a></li>
+        <li class="accordion-drilldown"><a href="/terms">Terms and Conditions</a></li>
       </ul>
     </div>
     
