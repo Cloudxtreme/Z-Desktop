@@ -144,7 +144,7 @@ echo $header; ?>
       
       
       
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" style="width:100%;font-size:12px">
         <thead>
           <tr>
             <td class="top-table" style="width: 50%;"><?php echo $text_payment_address; ?></td>
@@ -183,7 +183,7 @@ echo $header; ?>
       
       
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" style="width:100%;font-size:12px">
           <thead>
             <tr>
               <td class="top-table"><?php echo $column_name; ?></td>
@@ -280,7 +280,7 @@ echo $header; ?>
       
       
       <?php if ($comment) { ?>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" style="width:100%;font-size:12px">
         <thead>
           <tr>
             <td class="top-table"><?php echo $text_comment; ?></td>
