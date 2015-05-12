@@ -61,18 +61,18 @@ echo $header; ?>
            <?php echo $content_top; ?>  
              <h2><?php echo $heading_title; ?></h2>
              
-             <p><strong>Key:<br />
-             Processing - Order is being prepared.
-             Refunded - Order has been refunded, payment sent.
-             Cancelled - Order cancelled, payment not taken or refunded.
-             Returned - Order returned succesful.
-             Awaiting Return - We are awaiting the goods to process return.
+             <p><strong><i class="fa fa-key"></i> Key:</strong> <br />
+             <strong>Processing</strong> - Order is being prepared.<br />
+             <strong>Refunded</strong> - Order has been refunded, payment sent.<br />
+             <strong>Cancelled</strong> - Order cancelled, payment not taken or refunded.<br />
+             <strong>Returned</strong> - Order returned succesful.<br />
+             <strong>Awaiting Return</strong> - We are awaiting the goods to process return.<br />
              
              
              </strong></p>
             
             <?php if ($orders) { ?>
-      <div class="table-responsive" style="width:100%">
+      <div class="table-responsive" style="width:100%" style="font-family:12px">
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
@@ -96,7 +96,7 @@ echo $header; ?>
               <td class="bottom-table "><?php echo $order['total']; ?></td>
               <td class="bottom-table ">
               
-              <center><a style="background:#000;color:#fff;border-radius:0;border:0" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></center>
+              <center><a style="background:#febd18;color:#303c42;border-radius:3px;border:1px solid #303c42" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></center>
               
               </td>
             </tr>
