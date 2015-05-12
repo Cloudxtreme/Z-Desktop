@@ -37,9 +37,6 @@ jQuery('#column-right').removeClass('col-sm-3');
 <h4 class="support-divider">My Orders</h2>
     <ul class="list-unstyled">
         <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-        <?php if ($reward) { ?>
-        <li><a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></li>
-        <?php } ?>
     </ul>
  
 </div>
