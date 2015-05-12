@@ -23,7 +23,7 @@
       <hr>
       <ul class="accordion-content">
         <li class="accordion-drilldown"><a href="/about">About Us</a></li>
-        <li class="hiddenmobile accordion-drilldown"><a href="">Work Here</a></li>
+        <li class="hiddenmobile accordion-drilldown"><a href="/careers">Work Here</a></li>
         <li class="hiddenmobile accordion-drilldown"><a href="">Press</a></li>
       </ul>
     </div>
