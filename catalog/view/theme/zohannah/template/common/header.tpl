@@ -130,15 +130,11 @@
          </a>
       </div>  
       <!--
-      // MAIN NAV
+      // MAIN NAV - DESKTOP
       -->  
       <div id="nav-container">
          <nav id="nav-primary-wrapper" role="navigation">
          <ul class="nav-primary nix-nav-list">
-   
-            <li class="nav-primary-item nav-secondary">
-            	<a href="#" class="nix-nav-submenu-link">Shop all</a>
-            </li>
                   
             <?php if ($categories) { ?>
               	<?php foreach ($categories as $category) { ?>
@@ -166,7 +162,11 @@
 <div class="panel-group" id="accordion-inner">
 
 <?php if ($categories) { ?>
-<?php foreach ($categories as $category) { ?>
+<?php
+$i=0;
+foreach ($categories as $category) {
+	$i++;
+    ?>
    
    <?php if ($category['children']) { ?>
    
@@ -174,11 +174,11 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-inner" href="#collapse-inner1" class="collapsed"><?php echo $category['name']; ?></a>
+            <a data-toggle="collapse" data-parent="#accordion-inner" href="#collapse-inner<?=$i?>" class="collapsed"><?php echo $category['name']; ?></a>
          </h4>
       </div>
    </div>
-      <div id="collapse-inner1" class="panel-collapse collapse">
+      <div id="collapse-inner<?=$i?>" class="panel-collapse collapse">
          <div class="panel-body panel-level2">
             <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
                <?php foreach ($children as $child) { ?>
@@ -216,7 +216,7 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h4 class="panel-title-empty">
-         <a href="#ZOHANNAH" class="collapsed">#ZOHANNAH</a>
+         <a href="#ZOHANNAH" class="collapsed"><center>#ZOHANNAH</center></a>
          </h4>
       </div>
    </div>
