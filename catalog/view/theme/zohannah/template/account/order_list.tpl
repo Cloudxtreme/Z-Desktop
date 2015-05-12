@@ -31,7 +31,7 @@ echo $header; ?>
 .btn-danger,.btn-info{text-decoration:none !important;padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
 .btn-danger a, .btn-info a{text-decoration:none !important} 
 .top-table{background:#5C5757;color:#fff;padding:3px;margin:3px}
-.bottom-table{background:#eaeaea;color:#fff;padding:3px;margin:3px}
+.bottom-table{background:#eaeaea;color:#000;padding:3px 5px;margin:3px}
 
 </style>
 
@@ -96,7 +96,7 @@ echo $header; ?>
               <td class="bottom-table "><?php echo $order['total']; ?></td>
               <td class="bottom-table ">
               
-              <center><a style="background:#000;color:#fff;border-radius:0" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></center>
+              <center><a style="background:#000;color:#fff;border-radius:0;border:0" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></center>
               
               </td>
             </tr>
