@@ -227,7 +227,7 @@ echo $header; ?>
           <tfoot>
             <?php foreach ($totals as $total) { ?>
             <tr>
-              <td colspan="3"></td>
+              <td colspan="3" class="bottom-table"></td>
               <td class="bottom-table"><b><?php echo $total['title']; ?></b></td>
               <td class="bottom-table"><?php echo $total['text']; ?></td>
               <?php if ($products) { ?>
@@ -288,7 +288,7 @@ echo $header; ?>
       <?php } ?>
       <?php if ($histories) { ?>
       <h3><?php echo $text_history; ?></h3>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" style="width:100%;font-size:12px">
         <thead>
           <tr>
             <td class="top-table"><?php echo $column_date_added; ?></td>
