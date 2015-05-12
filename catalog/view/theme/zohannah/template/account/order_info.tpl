@@ -191,9 +191,8 @@ echo $header; ?>
               <td class="top-table"><?php echo $column_quantity; ?></td>
               <td class="top-table"><?php echo $column_price; ?></td>
               <td class="top-table"><?php echo $column_total; ?></td>
-              <?php if ($products) { ?>
-              <td style="width: 20px;"></td>
-              <?php } ?>
+              
+              
             </tr>
           </thead>
           <tbody>
@@ -208,14 +207,8 @@ echo $header; ?>
               <td class="bottom-table"><?php echo $product['quantity']; ?></td>
               <td class="bottom-table"><?php echo $product['price']; ?></td>
               <td class="bottom-table"><?php echo $product['total']; ?></td>
-              <td class="bottom-table" style="white-space: nowrap;">
               
-              <span style="display:none"><?php if ($product['reorder']) { ?>
-                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
-                <?php } ?>
-                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></span>
               
-              </td>
             </tr>
             <?php } ?>
             <?php foreach ($vouchers as $voucher) { ?>
