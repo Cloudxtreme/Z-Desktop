@@ -61,28 +61,29 @@ echo $header; ?>
            <?php echo $content_top; ?>  
              <h2><?php echo $heading_title; ?></h2>
              
+
+             
+             
              <p><strong><i class="fa fa-key"></i> Key:</strong> <br />
              <strong>Processing</strong> - Order is being prepared.<br />
              <strong>Refunded</strong> - Order has been refunded, payment sent.<br />
              <strong>Cancelled</strong> - Order cancelled, payment not taken or refunded.<br />
              <strong>Returned</strong> - Order returned succesful.<br />
              <strong>Awaiting Return</strong> - We are awaiting the goods to process return.<br />
-             
-             
-             </strong></p>
+             </p>
             
             <?php if ($orders) { ?>
       <div class="table-responsive" style="width:100%" style="font-family:12px">
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td class="top-table "><?php echo $column_order_id; ?></td>
-              <td class="top-table "><?php echo $column_status; ?></td>
-              <td class="top-table "><?php echo $column_date_added; ?></td>
-              <td class="top-table "><?php echo $column_product; ?></td>
+              <td class="top-table ">#</td>
+              <td class="top-table ">Status</td>
+              <td class="top-table ">Date</td>
+              <td class="top-table ">Qty</td>
               <td class="top-table "><?php echo $column_customer; ?></td>
               <td class="top-table "><?php echo $column_total; ?></td>
-              <td class="top-table"> Info</td>
+              <td class="top-table"> <center>Info</center></td>
             </tr>
           </thead>
           <tbody>
