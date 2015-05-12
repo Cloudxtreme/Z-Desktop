@@ -31,6 +31,8 @@ echo $header; ?>
 .btn-danger,.btn-info{text-decoration:none !important;padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
 .btn-danger a, .btn-info a{text-decoration:none !important} 
 .top-table{background:#5C5757;color:#fff;padding:3px;margin:3px}
+.bottom-table{background:#eaeaea;color:#fff;padding:3px;margin:3px}
+
 </style>
 
 <!--
@@ -58,6 +60,16 @@ echo $header; ?>
            
            <?php echo $content_top; ?>  
              <h2><?php echo $heading_title; ?></h2>
+             
+             <p><strong>Key:<br />
+             Processing - Order is being prepared.
+             Refunded - Order has been refunded, payment sent.
+             Cancelled - Order cancelled, payment not taken or refunded.
+             Returned - Order returned succesful.
+             Awaiting Return - We are awaiting the goods to process return.
+             
+             
+             </strong></p>
             
             <?php if ($orders) { ?>
       <div class="table-responsive" style="width:100%">
@@ -70,19 +82,23 @@ echo $header; ?>
               <td class="top-table "><?php echo $column_product; ?></td>
               <td class="top-table "><?php echo $column_customer; ?></td>
               <td class="top-table "><?php echo $column_total; ?></td>
-              <td></td>
+              <td class="top-table"> Info</td>
             </tr>
           </thead>
           <tbody>
             <?php foreach ($orders as $order) { ?>
             <tr>
-              <td class="">#<?php echo $order['order_id']; ?></td>
-              <td class=""><?php echo $order['status']; ?></td>
-              <td class=""><?php echo $order['date_added']; ?></td>
-              <td class=""><?php echo $order['products']; ?></td>
-              <td class=""><?php echo $order['name']; ?></td>
-              <td class=""><?php echo $order['total']; ?></td>
-              <td class=""><a style="background:#000;color:#fff;border-radius:0" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></td>
+              <td class="bottom-table ">#<?php echo $order['order_id']; ?></td>
+              <td class="bottom-table "><?php echo $order['status']; ?></td>
+              <td class="bottom-table "><?php echo $order['date_added']; ?></td>
+              <td class="bottom-table "><?php echo $order['products']; ?></td>
+              <td class="bottom-table "><?php echo $order['name']; ?></td>
+              <td class="bottom-table "><?php echo $order['total']; ?></td>
+              <td class="bottom-table ">
+              
+              <center><a style="background:#000;color:#fff;border-radius:0" href="<?php echo $order['href']; ?>" data-toggle="tooltip" title="<?php echo $button_view; ?>" class="btn btn-info"><i class="fa  fa-info-circle "></i> VIEW</a></center>
+              
+              </td>
             </tr>
             <?php } ?>
           </tbody>
