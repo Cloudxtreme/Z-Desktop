@@ -99,20 +99,26 @@ echo $header; ?>
            
            
            
+           
+           
+           
+           
+           
+           
            <table class="table table-bordered table-hover" style="width:100%;font-size:12px">
         <thead>
           <tr>
-            <td class="" colspan="2"><?php echo $text_order_detail; ?></td>
+            <td class="top-table" colspan="2"><?php echo $text_order_detail; ?></td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="" style="width: 50%;"><?php if ($invoice_no) { ?>
+            <td class="bottom-table" style="width: 50%;"><?php if ($invoice_no) { ?>
               <b><?php echo $text_invoice_no; ?></b> <?php echo $invoice_no; ?><br />
               <?php } ?>
               <b><?php echo $text_order_id; ?></b> #<?php echo $order_id; ?><br />
               <b><?php echo $text_date_added; ?></b> <?php echo $date_added; ?></td>
-            <td class=""><?php if ($payment_method) { ?>
+            <td class="bottom-table"><?php if ($payment_method) { ?>
               <b><?php echo $text_payment_method; ?></b> <?php echo $payment_method; ?><br />
               <?php } ?>
               <?php if ($shipping_method) { ?>
@@ -121,33 +127,70 @@ echo $header; ?>
           </tr>
         </tbody>
       </table>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <td class="" style="width: 50%;"><?php echo $text_payment_address; ?></td>
+            <td class="top-table" style="width: 50%;"><?php echo $text_payment_address; ?></td>
             <?php if ($shipping_address) { ?>
-            <td class=""><?php echo $text_shipping_address; ?></td>
+            <td class="top-table"><?php echo $text_shipping_address; ?></td>
             <?php } ?>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class=""><?php echo $payment_address; ?></td>
+            <td class="bottom-table"><?php echo $payment_address; ?></td>
             <?php if ($shipping_address) { ?>
-            <td class=""><?php echo $shipping_address; ?></td>
+            <td class="bottom-table"><?php echo $shipping_address; ?></td>
             <?php } ?>
           </tr>
         </tbody>
       </table>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <div class="table-responsive">
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <td class=""><?php echo $column_name; ?></td>
-              <td class=""><?php echo $column_model; ?></td>
-              <td class=""><?php echo $column_quantity; ?></td>
-              <td class=""><?php echo $column_price; ?></td>
-              <td class=""><?php echo $column_total; ?></td>
+              <td class="top-table"><?php echo $column_name; ?></td>
+              <td class="top-table"><?php echo $column_model; ?></td>
+              <td class="top-table"><?php echo $column_quantity; ?></td>
+              <td class="top-table"><?php echo $column_price; ?></td>
+              <td class="top-table"><?php echo $column_total; ?></td>
               <?php if ($products) { ?>
               <td style="width: 20px;"></td>
               <?php } ?>
@@ -156,28 +199,32 @@ echo $header; ?>
           <tbody>
             <?php foreach ($products as $product) { ?>
             <tr>
-              <td class=""><?php echo $product['name']; ?>
+              <td class="bottom-table"><?php echo $product['name']; ?>
                 <?php foreach ($product['option'] as $option) { ?>
                 <br />
                 &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
                 <?php } ?></td>
-              <td class=""><?php echo $product['model']; ?></td>
-              <td class=""><?php echo $product['quantity']; ?></td>
-              <td class=""><?php echo $product['price']; ?></td>
-              <td class=""><?php echo $product['total']; ?></td>
-              <td class="" style="white-space: nowrap;"><?php if ($product['reorder']) { ?>
+              <td class="bottom-table"><?php echo $product['model']; ?></td>
+              <td class="bottom-table"><?php echo $product['quantity']; ?></td>
+              <td class="bottom-table"><?php echo $product['price']; ?></td>
+              <td class="bottom-table"><?php echo $product['total']; ?></td>
+              <td class="bottom-table" style="white-space: nowrap;">
+              
+              <span style="display:none"><?php if ($product['reorder']) { ?>
                 <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
                 <?php } ?>
-                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
+                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></span>
+              
+              </td>
             </tr>
             <?php } ?>
             <?php foreach ($vouchers as $voucher) { ?>
             <tr>
-              <td class=""><?php echo $voucher['description']; ?></td>
-              <td class=""></td>
-              <td class="">1</td>
-              <td class=""><?php echo $voucher['amount']; ?></td>
-              <td class=""><?php echo $voucher['amount']; ?></td>
+              <td class="bottom-table"><?php echo $voucher['description']; ?></td>
+              <td class="bottom-table"></td>
+              <td class="bottom-table">1</td>
+              <td class="bottom-table"><?php echo $voucher['amount']; ?></td>
+              <td class="bottom-table"><?php echo $voucher['amount']; ?></td>
               <?php if ($products) { ?>
               <td></td>
               <?php } ?>
@@ -188,8 +235,8 @@ echo $header; ?>
             <?php foreach ($totals as $total) { ?>
             <tr>
               <td colspan="3"></td>
-              <td class=""><b><?php echo $total['title']; ?></b></td>
-              <td class=""><?php echo $total['text']; ?></td>
+              <td class="bottom-table"><b><?php echo $total['title']; ?></b></td>
+              <td class="bottom-table"><?php echo $total['text']; ?></td>
               <?php if ($products) { ?>
               <td></td>
               <?php } ?>
@@ -198,16 +245,50 @@ echo $header; ?>
           </tfoot>
         </table>
       </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <?php if ($comment) { ?>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <td class=""><?php echo $text_comment; ?></td>
+            <td class="top-table"><?php echo $text_comment; ?></td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class=""><?php echo $comment; ?></td>
+            <td class="bottom-table"><?php echo $comment; ?></td>
           </tr>
         </tbody>
       </table>
@@ -217,17 +298,17 @@ echo $header; ?>
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <td class=""><?php echo $column_date_added; ?></td>
-            <td class=""><?php echo $column_status; ?></td>
-            <td class=""><?php echo $column_comment; ?></td>
+            <td class="top-table"><?php echo $column_date_added; ?></td>
+            <td class="top-table"><?php echo $column_status; ?></td>
+            <td class="top-table"><?php echo $column_comment; ?></td>
           </tr>
         </thead>
         <tbody>
           <?php foreach ($histories as $history) { ?>
           <tr>
-            <td class=""><?php echo $history['date_added']; ?></td>
-            <td class=""><?php echo $history['status']; ?></td>
-            <td class=""><?php echo $history['comment']; ?></td>
+            <td class="bottom-table"><?php echo $history['date_added']; ?></td>
+            <td class="bottom-table"><?php echo $history['status']; ?></td>
+            <td class="bottom-table"><?php echo $history['comment']; ?></td>
           </tr>
           <?php } ?>
         </tbody>
@@ -241,7 +322,23 @@ echo $header; ?>
      
      
      
+      
+      
+      
+      
+      
+      
+      
+      
      
+      
+      
+      
+      
+      
+      
+      
+      
      
      
      
