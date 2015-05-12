@@ -1,21 +1,64 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <?php if ($orders) { ?>
+<?
+/***
+
+ * --- --- --- --- ---
+ * Zohannah
+ * Khaleel Mughal
+ * --- --- --- --- ---
+ * #Z1
+ * --- --- --- --- ---
+
+***/
+echo $header; ?>
+
+<!--
+// PAGE CSS
+-->
+<style type="text/css">
+.nix-hero{background:url(/catalog/view/theme/zohannah/image/campaigns/about.jpg) no-repeat center;background-size:cover}
+.sidebar-support h4{padding-left:0}
+.home .nix-hero-container{height:450px}
+.page-container{margin-top:25px;margin-bottom:25px}
+#column-right{float:right}
+@media only screen and (max-width:750px){
+	.home .nix-hero-container{height:250px}
+	#column-right{float:none}
+}
+.form-control{border-radius:0}
+.btn-primary{border-radius:0;border:0;background:#000;text-transform:uppercase}
+.btn-primary:hover{background:#333 !important}
+.btn-default{border-radius:0;text-transform:uppercase}
+.btn-danger,.btn-info{text-decoration:none !important;padding:3px 5px;border-radius:0;text-transform:uppercase;font-size:11px;text-decoration:none}
+.btn-danger a, .btn-info a{text-decoration:none !important} 
+</style>
+
+<!--
+// HTML
+-->
+<div class="center center-shadow nix-hero secondary-hero">
+   <div class="hero-nav-container nix-hero-container">
+      <div class="nix-hero-copy-wrapper">
+         <div class="nix-hero-copy">
+            <h1 class="nix-hero-head"><?php echo $heading_title; ?></h1>
+            <p style="color:#fff">View all your order history.</p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="container page-container work-here-container">
+   
+   <div class="row">
+   
+      <div id="generalcontent" class="primary-content">
+        <div align="justify">
+         <!-- IMPO - OGC_Z_ACCOUNT-->
+            
+           
+           <?php echo $content_top; ?>  
+             <h2><?php echo $heading_title; ?></h2>
+            
+            <?php if ($orders) { ?>
       <div class="table-responsive">
         <table class="table table-bordered table-hover">
           <thead>
@@ -46,12 +89,31 @@
       </div>
       <div class="text-right"><?php echo $pagination; ?></div>
       <?php } else { ?>
-      <p><?php echo $text_empty; ?></p>
+      <p><center><?php echo $text_empty; ?></center></p>
       <?php } ?>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+            
+            
+          
+          
+            
+            <!--// END IMP-->  
+                   
+        </div>
       </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+      
+      <br />
+      
+      <?php echo $column_right; ?>
+      
+   </div>
 </div>
-<?php echo $footer; ?>
+
+<?
+echo $footer;
+?>
+
+
+
+
+
+
