@@ -35,7 +35,7 @@ echo $header; ?>
 </style>
 
 
-<div class="center center-shadow nix-hero secondary-hero">
+<div class="center center-shadow nix-hero secondary-hero hero_<?php echo $heading_title; ?>">
    <div class="hero-nav-container nix-hero-container">
       <div class="nix-hero-copy-wrapper">
          <div class="nix-hero-copy">
