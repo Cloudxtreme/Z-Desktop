@@ -233,7 +233,7 @@ $pid=$product_id;
 <!--
 // PRODUCT SIZING LINKS AND WATER WASH GUIDES
 -->
-<div class="row">
+<div class="row hide">
 <div class="story-spec-list">
 <div class="spec-list-item">
 
