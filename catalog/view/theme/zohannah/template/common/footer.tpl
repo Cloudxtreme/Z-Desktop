@@ -32,7 +32,6 @@
       <h6 class="accordion-header"> <a name="footer-header">Service </a> </h6>
       <hr>
       <ul class="accordion-content">
-        <li class="accordion-drilldown"><a href="/faqs">FAQs</a></li>
         <li class="accordion-drilldown"><a href="/sizeguides">Size Guides</a></li>
         <li class="accordion-drilldown"><a href="/contact">Contact Us</a> </li>
       </ul>
