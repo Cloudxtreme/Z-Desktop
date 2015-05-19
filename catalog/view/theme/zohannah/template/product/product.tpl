@@ -752,7 +752,7 @@ c0,0.4-0.2,0.8-0.5,1.2l-2.1,2.4v1.4h4.1v-1.3h-2.2l1.3-1.5C14.4,15.1,14.9,14.4,14
 M17.9,17.3c-0.6,0-0.7-1.3-0.7-2.2c0-0.9,0.1-2.2,0.7-2.2s0.7,1.3,0.7,2.2C18.6,16,18.5,17.3,17.9,17.3z"/><path fill="#1E1E1E" d="M23,11.5c-1.9,0-2.3,2-2.3,3.6c0,1.6,0.4,3.6,2.3,3.6c1.9,0,2.3-2,2.3-3.6C25.3,13.5,24.9,11.5,23,11.5z
 M23,17.3c-0.6,0-0.7-1.3-0.7-2.2c0-0.9,0.1-2.2,0.7-2.2s0.7,1.3,0.7,2.2C23.7,16,23.6,17.3,23,17.3z"/><polygon fill="#1E1E1E" points="31.2,16 31.2,16 30.1,11.6 28.1,11.6 28.1,18.5 29.5,18.5 29.5,13.8 29.5,13.8 30.6,18.5 31.7,18.5 32.9,13.8 32.9,13.8 32.9,18.5 34.4,18.5 34.4,11.6 32.3,11.6 "/></g></svg></span><span class="spec-list-text">Water Rating</span></a> </div></div></div>
 
-<div class="row">
+<div class="row hide">
    <div class="warranty">
    <p>Warrranty: ZOHANNAH.com offers a limited warranty on defects in materials and handicraft for a period of two (2) years after you have bought the garment.</p>
    </div>
